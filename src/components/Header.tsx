@@ -99,7 +99,7 @@ export function Header() {
               whileTap={{ scale: 0.98 }}
             >
               <img 
-                src="/public/logotipo-horizontal.png" 
+                src="/logotipo-horizontal.png" 
                 alt="G3 Gamer Store" 
                 className="h-16 md:h-20 w-auto"
               />

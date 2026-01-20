@@ -40,7 +40,7 @@ export function Footer() {
               whileHover={{ scale: 1.02 }}
             >
               <img 
-                src="public/logotipo-horizontal.png" 
+                src="/logotipo-horizontal.png" 
                 alt="G3 Gamer Store" 
                 className="h-16 w-auto"
               />
