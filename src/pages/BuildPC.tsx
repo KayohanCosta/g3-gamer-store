@@ -507,8 +507,8 @@ export default function BuildPC() {
               ))}
             </div>
 
-            <div className="flex justify-between items-center pt-6 border-t border-border">
-              <div>
+            <div className="pt-6 border-t border-border space-y-4">
+              <div className="text-center">
                 <p className="text-muted-foreground mb-2">Total da Configuração:</p>
                 <p className="text-3xl font-bold text-gradient-gold">
                   R$ {calculateTotal().toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
@@ -518,7 +518,7 @@ export default function BuildPC() {
                 onClick={handleAddToCart}
                 disabled={Object.keys(selectedComponents).length === 0}
                 size="lg"
-                className="px-8"
+                className="w-full px-8"
               >
                 Adicionar ao Carrinho
               </Button>
