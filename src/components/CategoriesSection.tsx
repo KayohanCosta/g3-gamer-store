@@ -1,17 +1,18 @@
 import { motion } from 'framer-motion';
-import { Cpu, CircuitBoard, MemoryStick, Monitor, HardDrive, Zap, Armchair, Keyboard, Speaker, Fan } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const categories = [
-  { name: 'Processadores', icon: Cpu, color: 'from-blue-500 to-blue-600' },
-  { name: 'Placa Mãe', icon: CircuitBoard, color: 'from-green-500 to-green-600' },
-  { name: 'Memória RAM', icon: MemoryStick, color: 'from-purple-500 to-purple-600' },
-  { name: 'Placa de Vídeo', icon: Monitor, color: 'from-red-500 to-red-600' },
-  { name: 'Armazenamento', icon: HardDrive, color: 'from-orange-500 to-orange-600' },
-  { name: 'Fontes', icon: Zap, color: 'from-yellow-500 to-yellow-600' },
-  { name: 'Cadeiras Gamer', icon: Armchair, color: 'from-pink-500 to-pink-600' },
-  { name: 'Periféricos', icon: Keyboard, color: 'from-cyan-500 to-cyan-600' },
-  { name: 'Caixas de Som', icon: Speaker, color: 'from-indigo-500 to-indigo-600' },
-  { name: 'Coolers', icon: Fan, color: 'from-teal-500 to-teal-600' },
+  { name: 'Processadores', image: '/src/assets/PROCESSADOR.png' },
+  { name: 'Placa Mãe', image: '/src/assets/PLACAMAE.jpg' },
+  { name: 'Memória', image: '/src/assets/MEMEORIARAM.jpg' },
+  { name: 'Placa de Vídeo', image: '/src/assets/PLACADEVIDEO.jpg' },
+  { name: 'Armazenamento SSD', image: '/src/assets/ARMAZENAMENTO.jpg' },
+  { name: 'Fontes Real', image: '/src/assets/FONTEREAL.jpg' },
+  { name: 'Cadeiras Gamers', image: '/src/assets/CADEIRAGAMER.jpg' },
+  { name: 'Periféricos', image: '/src/assets/perifericos.jpg' },
+  { name: 'Caixa de som', image: '/src/assets/CAIXADESOM.jpg' },
+  { name: 'Coolers', image: '/src/assets/COOLERBOX.jpg' },
+  { name: 'Fans', image: '/src/assets/FANS.jpg' },
 ];
 
 export function CategoriesSection() {
@@ -32,7 +33,7 @@ export function CategoriesSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {categories.map((category, index) => (
             <motion.a
               key={category.name}
@@ -41,20 +42,29 @@ export function CategoriesSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative bg-gradient-card border border-border rounded-2xl p-6 text-center hover:border-primary/50 transition-all duration-300 overflow-hidden"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="group relative h-64 rounded-2xl overflow-hidden"
             >
-              {/* Gradient Overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+              {/* Background Image */}
+              <img 
+                src={category.image} 
+                alt={category.name}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
               
-              <div className="relative z-10">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-muted flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                  <category.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-display text-sm md:text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              
+              {/* Content */}
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="font-display text-lg font-bold text-white mb-2">
                   {category.name}
                 </h3>
+                <div className="flex items-center gap-2 text-white/90 text-sm font-medium">
+                  Ver produtos
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
             </motion.a>
           ))}
