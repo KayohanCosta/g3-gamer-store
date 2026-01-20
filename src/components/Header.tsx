@@ -14,7 +14,7 @@ const navLinks = [
   { label: 'Home', href: '#' },
   { label: 'Todos os Produtos', href: '#produtos' },
   { label: 'Kit Upgrade', href: '#upgrade' },
-  { label: 'Monte Seu PC', href: '#monte' },
+  { label: 'Monte Seu PC', href: '/monte-seu-pc' },
 ];
 
 const categories = [
@@ -93,7 +93,7 @@ export function Header() {
           <div className="flex items-center justify-between gap-4">
             {/* Logo */}
             <motion.a 
-              href="#"
+              href="/"
               className="flex items-center"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
