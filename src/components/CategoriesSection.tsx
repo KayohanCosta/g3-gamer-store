@@ -1,18 +1,29 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import processadorImg from '../assets/PROCESSADOR.png';
+import placaMaeImg from '../assets/PLACAMAE.jpg';
+import memoriaImg from '../assets/MEMEORIARAM.jpg';
+import placaVideoImg from '../assets/PLACADEVIDEO.jpg';
+import armazenamentoImg from '../assets/ARMAZENAMENTO.jpg';
+import fonteImg from '../assets/FONTEREAL.jpg';
+import cadeiraImg from '../assets/CADEIRAGAMER.jpg';
+import perifericosImg from '../assets/perifericos.jpg';
+import caixaSomImg from '../assets/CAIXADESOM.jpg';
+import coolerBoxImg from '../assets/COOLERBOX.jpg';
+import fansImg from '../assets/FANS.jpg';
 
 const categories = [
-  { name: 'Processadores', image: '/src/assets/PROCESSADOR.png' },
-  { name: 'Placa Mãe', image: '/src/assets/PLACAMAE.jpg' },
-  { name: 'Memória', image: '/src/assets/MEMEORIARAM.jpg' },
-  { name: 'Placa de Vídeo', image: '/src/assets/PLACADEVIDEO.jpg' },
-  { name: 'Armazenamento SSD', image: '/src/assets/ARMAZENAMENTO.jpg' },
-  { name: 'Fontes Real', image: '/src/assets/FONTEREAL.jpg' },
-  { name: 'Cadeiras Gamers', image: '/src/assets/CADEIRAGAMER.jpg' },
-  { name: 'Periféricos', image: '/src/assets/perifericos.jpg' },
-  { name: 'Caixa de som', image: '/src/assets/CAIXADESOM.jpg' },
-  { name: 'Coolers', image: '/src/assets/COOLERBOX.jpg' },
-  { name: 'Fans', image: '/src/assets/FANS.jpg' },
+  { name: 'Processadores', image: processadorImg },
+  { name: 'Placa Mãe', image: placaMaeImg },
+  { name: 'Memória', image: memoriaImg },
+  { name: 'Placa de Vídeo', image: placaVideoImg },
+  { name: 'Armazenamento SSD', image: armazenamentoImg },
+  { name: 'Fontes Real', image: fonteImg },
+  { name: 'Cadeiras Gamers', image: cadeiraImg },
+  { name: 'Periféricos', image: perifericosImg },
+  { name: 'Caixa de som', image: caixaSomImg },
+  { name: 'Coolers', image: coolerBoxImg },
+  { name: 'Fans', image: fansImg },
 ];
 
 export function CategoriesSection() {
